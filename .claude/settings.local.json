@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la /Users/swayamagrawal/.claude/skills/UI-UX/ 2>&1 | head -50)",
+      "Read(//Users/swayamagrawal/.claude/skills/UI-UX/**)",
+      "Bash(python3 -c ' *)",
+      "Read(//tmp/**)",
+      "Bash(node --check /tmp/component_extract.txt)",
+      "Bash(mkdir -p .claude && ls -la)"
+    ]
+  }
+}
