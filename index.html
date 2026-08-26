@@ -59,7 +59,7 @@
   .coverflow-expanded { max-height: 0; opacity: 0; overflow: hidden; pointer-events: none; transition: max-height 450ms ease, opacity 300ms ease; }
   .coverflow-card.is-expanded .coverflow-expanded { max-height: 480px; opacity: 1; pointer-events: auto; transition: max-height 450ms ease, opacity 300ms ease 150ms; }
   @media (max-width: 1024px) and (min-width: 641px) {
-    #about img { max-width: 350px !important; }
+    #about img { max-width: 100%; width: auto !important; height: 600px !important; }
   }
   @media (max-width: 768px) {
     .responsive-grid-2col { grid-template-columns: 1fr !important; }
@@ -247,7 +247,7 @@
       </div>
       <div style="position:relative;align-self:start;display:flex;align-items:center;justify-content:center;width:100%">
         <span data-px="-0.07" aria-hidden="true" style="position:absolute;left:-22px;top:34px;right:34px;bottom:-26px;background:var(--marigold);opacity:0.85;pointer-events:none"></span>
-        <img src="assets/swayam-portrait.jpg" alt="Illustrated portrait of Swayam Agrawal" data-px="0.05" style="position:relative;display:block;width:100%;height:auto;border-radius:var(--radius-none);max-width:400px;aspect-ratio:0.7" />
+        <img src="assets/swayam-portrait.jpg" alt="Illustrated portrait of Swayam Agrawal" data-px="0.05" style="position:relative;display:block;width:100%;height:auto;border-radius:var(--radius-none)" />
         <div style="position:absolute;right:-18px;bottom:-30px">
           <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Stamp" tone="marigold" size="{{ 112 }}" rotate="{{ 7 }}" hint-size="112px,112px">Pune<br />India<br />2026</x-import>
         </div>
