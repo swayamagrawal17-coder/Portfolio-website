@@ -41,54 +41,8 @@
 <link rel="stylesheet" href="_ds/niko-kane-portfolio-design-system-87771fc5-dfd9-4961-b0de-c778e4ba9035/tokens/effects.css" />
 <link rel="stylesheet" href="_ds/niko-kane-portfolio-design-system-87771fc5-dfd9-4961-b0de-c778e4ba9035/tokens/base.css" />
 <link rel="stylesheet" href="_ds/niko-kane-portfolio-design-system-87771fc5-dfd9-4961-b0de-c778e4ba9035/styles.css" />
+<link rel="stylesheet" href="styles.css?v=1" />
 <script src="_ds/niko-kane-portfolio-design-system-87771fc5-dfd9-4961-b0de-c778e4ba9035/_ds_bundle.js?v=3"></script>
-<style>
-  html { overflow-x: hidden; }
-  body { margin: 0; background: var(--paper-1); color: var(--ink-2); }
-  a { color: var(--text-link); text-underline-offset: 3px; }
-  a:hover { color: var(--text-link-hover); }
-  a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
-  ::selection { background: var(--marigold); color: var(--ink-1); }
-  @keyframes revealIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-  @keyframes gradientPan { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
-  @keyframes statsSlide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  @supports not (animation-timeline: view()) {
-    [data-reveal] { animation: none !important; opacity: 1 !important; transform: none !important; }
-  }
-  .coverflow-card.is-expanded { width: 380px !important; height: 600px !important; z-index: 40 !important; filter: brightness(1) !important; }
-  .coverflow-expanded { max-height: 0; opacity: 0; overflow: hidden; pointer-events: none; transition: max-height 450ms ease, opacity 300ms ease; }
-  .coverflow-card.is-expanded .coverflow-expanded { max-height: 480px; opacity: 1; pointer-events: auto; transition: max-height 450ms ease, opacity 300ms ease 150ms; }
-  @media (max-width: 1024px) and (min-width: 641px) {
-    #about img { max-width: 100%; width: auto !important; height: 600px !important; }
-  }
-  @media (max-width: 768px) {
-    .responsive-grid-2col { grid-template-columns: 1fr !important; }
-  }
-  @media (max-width: 640px) {
-    section { padding-left: 20px !important; padding-right: 20px !important; }
-    header { padding-left: 20px !important; padding-right: 20px !important; }
-    footer { padding-left: 20px !important; padding-right: 20px !important; }
-    #seh-reveal { padding: 0 20px 96px !important; align-items: center !important; text-align: center !important; }
-    #seh-reveal p { margin-left: auto !important; margin-right: auto !important; }
-    #seh-reveal > div { justify-content: center !important; width: 100% !important; }
-    .responsive-grid-2col, .responsive-grid-3col { grid-template-columns: 1fr !important; }
-    .coverflow-card.is-expanded { width: min(94vw, 380px) !important; }
-    #cert-scroller-pin { padding: 20px !important; }
-    #cert-gallery-card { grid-template-columns: 1fr !important; }
-    .cert-gallery-list-col { display: none !important; }
-    .cert-tile { padding: 20px !important; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    [data-reveal] { animation: none !important; opacity: 1 !important; transform: none !important; }
-    #seh-word-1, #seh-word-2 { animation: none !important; background-position: 0% 50% !important; }
-    #cert-scroller { height: auto !important; }
-    #cert-scroller-pin { position: static !important; height: auto !important; padding: 56px 24px !important; }
-    #stats-slider-track { animation: none !important; transform: none !important; flex-wrap: wrap; width: 100% !important; justify-content: center; }
-    #stats-slider-track [data-marquee-dup="true"] { display: none !important; }
-    .coverflow-card { transition: none !important; }
-    .coverflow-expanded { transition: none !important; }
-  }
-</style>
 </helmet>
 <div style="background:var(--paper-1);fontFamily:var(--font-ui);color:var(--ink-2)">
 
@@ -111,26 +65,26 @@
   <main id="main-content">
 
   <section data-screen-label="Hero" style="position:relative;overflow:hidden;minHeight:calc(100vh - 84px);boxSizing:border-box;background:var(--paper-1)">
-    <div id="seh-bg" aria-hidden="true" style="position:absolute;inset:0;background:var(--navy-deep) url(assets/hero-bg.jpg) center center / cover no-repeat"></div>
+    <div id="seh-bg" aria-hidden="true" style="position:absolute;inset:0;background:var(--ink-1) url(assets/hero-bg.jpg) center center / cover no-repeat"></div>
     <div style="position:relative;width:100%;height:calc(100vh - 84px);display:flex;alignItems:center;justifyContent:center">
       <div id="seh-box" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;height:400px;maxWidth:95vw;maxHeight:85vh;borderRadius:var(--radius-lg);overflow:hidden;boxShadow:0 24px 60px rgba(17,17,17,.35)">
-        <img src="assets/hero-landscape.jpg" alt="Illustrated portrait of Swayam Agrawal taking a mirror selfie against a creative collage background" style="width:100%;height:100%;objectFit:cover;display:block" />
-        <div id="seh-overlay" aria-hidden="true" style="position:absolute;inset:0;background:var(--navy-deep);opacity:0.72"></div>
+        <img src="assets/hero-landscape.jpg" alt="Illustrated portrait of Swayam Agrawal taking a mirror selfie against a creative collage background" width="300" height="400" style="width:100%;height:100%;objectFit:cover;display:block" fetchpriority="high" />
+        <div id="seh-overlay" aria-hidden="true" style="position:absolute;inset:0;background:var(--ink-1);opacity:0.72"></div>
         <div style="position:absolute;left:16px;right:16px;bottom:22px;display:flex;flexDirection:column;alignItems:center;gap:6px;textAlign:center">
-          <span id="seh-eyebrow" style="margin:0;fontSize:var(--size-eyebrow);letterSpacing:var(--ls-eyebrow);textTransform:uppercase;fontWeight:700;color:var(--lavender-tint)">Finance &amp; Analytics</span>
+          <span id="seh-eyebrow" style="margin:0;fontSize:var(--size-eyebrow);letterSpacing:var(--ls-eyebrow);textTransform:uppercase;fontWeight:700;color:var(--marigold-soft)">Finance &amp; Analytics</span>
           <span id="seh-hint" style="margin:0;fontSize:var(--size-small);color:rgba(248,246,240,.75)">Scroll to explore</span>
         </div>
       </div>
       <h1 style="margin:0;position:relative;display:flex;alignItems:center;justifyContent:center;gap:16px;pointerEvents:none;fontWeight:400">
-        <span id="seh-word-1" style="fontFamily:var(--font-display);fontSize:clamp(34px,6vw,72px);lineHeight:1;backgroundImage:linear-gradient(90deg, var(--marigold), var(--vermilion), var(--navy-soft), var(--marigold));backgroundSize:300% 100%;-webkit-background-clip:text;backgroundClip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gradientPan 10s linear infinite alternate">Swayam</span>
-        <span id="seh-word-2" style="fontFamily:var(--font-display);fontSize:clamp(34px,6vw,72px);lineHeight:1;backgroundImage:linear-gradient(90deg, var(--marigold), var(--vermilion), var(--navy-soft), var(--marigold));backgroundSize:300% 100%;-webkit-background-clip:text;backgroundClip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gradientPan 10s linear -1.5s infinite alternate">Agrawal</span>
+        <span id="seh-word-1" style="fontFamily:var(--font-display);fontSize:clamp(34px,6vw,72px);lineHeight:1;backgroundImage:linear-gradient(90deg, var(--marigold), var(--vermilion), var(--marigold));backgroundSize:300% 100%;-webkit-background-clip:text;backgroundClip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gradientPan 10s linear infinite alternate">Swayam</span>
+        <span id="seh-word-2" style="fontFamily:var(--font-display);fontSize:clamp(34px,6vw,72px);lineHeight:1;backgroundImage:linear-gradient(90deg, var(--marigold), var(--vermilion), var(--marigold));backgroundSize:300% 100%;-webkit-background-clip:text;backgroundClip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gradientPan 10s linear -1.5s infinite alternate">Agrawal</span>
       </h1>
     </div>
     <div id="seh-reveal" style="position:relative;width:100%;maxWidth:1240px;margin:0 auto;padding:0 56px 96px;opacity:0;pointerEvents:none;transition:opacity 500ms ease;display:flex;flex-direction:column;align-items:flex-start">
       <p style="margin:0 0 22px;maxWidth:56ch;fontSize:var(--size-body);lineHeight:var(--lh-body);color:var(--text-body)">Field research, financial analysis and go-to-market work, with the numbers attached.</p>
       <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
-        <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Button" variant="navy" size="lg" arrow="{{ true }}" href="#work" hint-size="auto,52px">View my work</x-import>
-        <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Button" variant="outlineNavy" size="lg" href="mailto:swayamagrawal17@gmail.com" hint-size="auto,52px">Email me</x-import>
+        <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Button" variant="primary" size="lg" arrow="{{ true }}" href="#work" hint-size="auto,52px">View my work</x-import>
+        <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Button" variant="outlineLight" size="lg" href="mailto:swayamagrawal17@gmail.com" hint-size="auto,52px">Email me</x-import>
       </div>
     </div>
   </section>
@@ -247,7 +201,7 @@
       </div>
       <div style="position:relative;align-self:start;display:flex;align-items:center;justify-content:center;width:100%">
         <span data-px="-0.07" aria-hidden="true" style="position:absolute;left:-22px;top:34px;right:34px;bottom:-26px;background:var(--marigold);opacity:0.85;pointer-events:none"></span>
-        <img src="assets/swayam-portrait.jpg" alt="Illustrated portrait of Swayam Agrawal" data-px="0.05" style="position:relative;display:block;width:100%;height:auto;border-radius:var(--radius-none)" />
+        <img src="assets/swayam-portrait.jpg" alt="Illustrated portrait of Swayam Agrawal" data-px="0.05" loading="lazy" style="position:relative;display:block;width:100%;height:auto;border-radius:var(--radius-none)" />
         <div style="position:absolute;right:-18px;bottom:-30px">
           <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Stamp" tone="marigold" size="{{ 112 }}" rotate="{{ 7 }}" hint-size="112px,112px">Pune<br />India<br />2026</x-import>
         </div>
@@ -270,7 +224,7 @@
 
       <div id="work-coverflow" style="position:relative">
         <div id="work-coverflow-stage" style="position:relative;height:520px;display:flex;alignItems:center;justifyContent:center;perspective:1400px">
-            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--navy-deep);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
+            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--ink-1);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
               <div class="coverflow-content" style="position:relative;width:100%;height:100%;padding:28px 24px;boxSizing:border-box;display:flex;flexDirection:column;justifyContent:center;gap:22px;transition:opacity 400ms ease;overflowY:auto">
                 <span style="fontFamily:var(--font-display);fontSize:24px;fontWeight:700;lineHeight:1.15;color:var(--marigold)">Field research</span>
                 <div style="display:flex;flexDirection:column;gap:10px">
@@ -294,7 +248,7 @@
                 </div>
               </div>
             </div>
-            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--navy-deep);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
+            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--ink-1);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
               <div class="coverflow-content" style="position:relative;width:100%;height:100%;padding:28px 24px;boxSizing:border-box;display:flex;flexDirection:column;justifyContent:center;gap:22px;transition:opacity 400ms ease;overflowY:auto">
                 <span style="fontFamily:var(--font-display);fontSize:24px;fontWeight:700;lineHeight:1.15;color:var(--marigold)">GTM strategy</span>
                 <div style="display:flex;flexDirection:column;gap:10px">
@@ -317,7 +271,7 @@
                 </div>
               </div>
             </div>
-            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--navy-deep);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
+            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--ink-1);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
               <div class="coverflow-content" style="position:relative;width:100%;height:100%;padding:28px 24px;boxSizing:border-box;display:flex;flexDirection:column;justifyContent:center;gap:22px;transition:opacity 400ms ease;overflowY:auto">
                 <span style="fontFamily:var(--font-display);fontSize:24px;fontWeight:700;lineHeight:1.15;color:var(--marigold)">Digital audit</span>
                 <div style="display:flex;flexDirection:column;gap:10px">
@@ -341,7 +295,7 @@
                 </div>
               </div>
             </div>
-            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--navy-deep);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
+            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--ink-1);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
               <div class="coverflow-content" style="position:relative;width:100%;height:100%;padding:28px 24px;boxSizing:border-box;display:flex;flexDirection:column;justifyContent:center;gap:22px;transition:opacity 400ms ease;overflowY:auto">
                 <span style="fontFamily:var(--font-display);fontSize:24px;fontWeight:700;lineHeight:1.15;color:var(--marigold)">Compliance</span>
                 <div style="display:flex;flexDirection:column;gap:10px">
@@ -364,7 +318,7 @@
                 </div>
               </div>
             </div>
-            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--navy-deep);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
+            <div class="coverflow-card" style="position:absolute;width:280px;height:400px;borderRadius:var(--radius-card);overflow:hidden;background:var(--ink-1);border:1px solid var(--border-hairline-inverse);transformOrigin:center center;boxShadow:0 20px 45px rgba(0,0,0,.55);transition:transform 700ms cubic-bezier(.25,1,.5,1),opacity 700ms cubic-bezier(.25,1,.5,1),filter 700ms cubic-bezier(.25,1,.5,1),width 500ms cubic-bezier(.25,1,.5,1),height 500ms cubic-bezier(.25,1,.5,1)">
               <div class="coverflow-content" style="position:relative;width:100%;height:100%;padding:28px 24px;boxSizing:border-box;display:flex;flexDirection:column;justifyContent:center;gap:22px;transition:opacity 400ms ease;overflowY:auto">
                 <span style="fontFamily:var(--font-display);fontSize:24px;fontWeight:700;lineHeight:1.15;color:var(--marigold)">CRM</span>
                 <div style="display:flex;flexDirection:column;gap:10px">
@@ -457,7 +411,6 @@
   <!-- No overflow:hidden on this section (unlike its siblings): it's the ancestor of a position:sticky panel, and overflow:hidden here would make this section itself the sticky element's scroll container instead of the real viewport, breaking the pin. -->
   <section id="certifications" data-screen-label="Certifications" aria-labelledby="certifications-heading" style="position:relative;background:var(--surface-inverse);color:var(--text-on-dark)">
     <h2 id="certifications-heading" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);whiteSpace:nowrap;border:0">Certifications</h2>
-    <!-- Verify hrefs and .cert-tile images are "#" / placeholder-only until the user supplies real URLs and certificate screenshots. -->
     <div id="cert-scroller" style="position:relative;height:360vh">
       <div id="cert-scroller-pin" style="position:sticky;top:0;width:100%;height:100vh;display:flex;alignItems:center;justifyContent:center;padding:56px;boxSizing:border-box">
         <div id="cert-gallery-card" style="position:relative;width:100%;maxWidth:1160px;height:min(640px,82vh);display:grid;gridTemplateColumns:1.1fr 1fr;background:var(--paper-0);border:1px solid var(--border-hairline);boxShadow:0 24px 60px rgba(17,17,17,.14);overflow:hidden">
@@ -491,7 +444,7 @@
             <p style="margin:0;fontSize:var(--size-small);color:var(--text-muted)">Scroll to move through each credential, or click a name to jump.</p>
           </div>
 
-          <div id="cert-media-viewport" style="position:relative;overflow:hidden;background:var(--navy-deep)">
+          <div id="cert-media-viewport" style="position:relative;overflow:hidden;background:var(--ink-1)">
             <div id="cert-media-track" style="position:relative;width:100%;height:100%">
               <div class="cert-tile" data-cert-index="0" style="position:absolute;inset:0;display:flex;flexDirection:column;gap:14px;padding:32px;boxSizing:border-box;opacity:1;transform:scale(1);zIndex:2;pointerEvents:auto;transition:opacity 600ms var(--ease-out),transform 600ms var(--ease-out)">
                 <div style="display:flex;alignItems:center;justifyContent:space-between">
@@ -499,7 +452,7 @@
                   <span style="fontFamily:var(--font-display);fontSize:var(--size-h3);color:var(--marigold)">01</span>
                 </div>
                 <div style="flex:1;minHeight:0;display:flex;alignItems:center;justifyContent:center">
-                  <img src="assets/cert-google-pm.png" alt="Google Project Management Certificate" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
+                  <img src="assets/cert-google-pm.png" alt="Google Project Management Certificate" loading="lazy" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
                 </div>
                 <div style="display:flex;flexDirection:column;gap:10px">
                   <p style="margin:0;fontSize:12.5px;lineHeight:1.55;color:rgba(247,240,223,.8)">Covered how to run a project end to end: scoping and planning, budgeting, risk tracking, and keeping stakeholders aligned as the work moves. Structured around both Agile and traditional project management approaches.</p>
@@ -520,7 +473,7 @@
                   <span style="fontFamily:var(--font-display);fontSize:var(--size-h3);color:var(--marigold)">02</span>
                 </div>
                 <div style="flex:1;minHeight:0;display:flex;alignItems:center;justifyContent:center">
-                  <img src="assets/cert-upenn.png" alt="Finance &amp; Quantitative Modeling for Analysts certificate" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
+                  <img src="assets/cert-upenn.png" alt="Finance &amp; Quantitative Modeling for Analysts certificate" loading="lazy" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
                 </div>
                 <div style="display:flex;flexDirection:column;gap:10px">
                   <p style="margin:0;fontSize:12.5px;lineHeight:1.55;color:rgba(247,240,223,.8)">A specialization on how financial decisions actually get modeled: time value of money, forecasting, and building the spreadsheet models analysts use to size a decision rather than just describe it.</p>
@@ -541,7 +494,7 @@
                   <span style="fontFamily:var(--font-display);fontSize:var(--size-h3);color:var(--marigold)">03</span>
                 </div>
                 <div style="flex:1;minHeight:0;display:flex;alignItems:center;justifyContent:center">
-                  <img src="assets/cert-citi.png" alt="Citi Investment Banking Job Simulation certificate" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
+                  <img src="assets/cert-citi.png" alt="Citi Investment Banking Job Simulation certificate" loading="lazy" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
                 </div>
                 <div style="display:flex;flexDirection:column;gap:10px">
                   <p style="margin:0;fontSize:12.5px;lineHeight:1.55;color:rgba(247,240,223,.8)">A self-paced simulation of a real analyst task at Citi, working from source materials through to a client-ready recommendation.</p>
@@ -562,7 +515,7 @@
                   <span style="fontFamily:var(--font-display);fontSize:var(--size-h3);color:var(--marigold)">04</span>
                 </div>
                 <div style="flex:1;minHeight:0;display:flex;alignItems:center;justifyContent:center">
-                  <img src="assets/cert-deloitte.png" alt="Deloitte Data Analytics Job Simulation certificate" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
+                  <img src="assets/cert-deloitte.png" alt="Deloitte Data Analytics Job Simulation certificate" loading="lazy" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
                 </div>
                 <div style="display:flex;flexDirection:column;gap:10px">
                   <p style="margin:0;fontSize:12.5px;lineHeight:1.55;color:rgba(247,240,223,.8)">A self-paced simulation of a real analyst task at Deloitte, working through data analysis and forensic technology exercises using real-world scenarios.</p>
@@ -582,7 +535,7 @@
                   <span style="fontFamily:var(--font-display);fontSize:var(--size-h3);color:var(--marigold)">05</span>
                 </div>
                 <div style="flex:1;minHeight:0;display:flex;alignItems:center;justifyContent:center">
-                  <img src="assets/cert-google-ai-essentials.png" alt="Google AI Essentials certificate" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
+                  <img src="assets/cert-google-ai-essentials.png" alt="Google AI Essentials certificate" loading="lazy" style="maxWidth:100%;maxHeight:100%;objectFit:contain;background:var(--paper-0);border:1px solid rgba(247,240,223,.15);boxShadow:0 12px 30px rgba(0,0,0,.35)" />
                 </div>
                 <div style="display:flex;flexDirection:column;gap:10px">
                   <p style="margin:0;fontSize:12.5px;lineHeight:1.55;color:rgba(247,240,223,.8)">A practical introduction to using generative AI tools responsibly at work: writing effective prompts, evaluating AI output critically, and knowing where automation helps versus where judgment still matters.</p>
@@ -625,7 +578,7 @@
     <div style="position:relative;maxWidth:1240px;margin:0 auto;display:flex;flexDirection:column;gap:30px;alignItems:flex-start">
       <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Eyebrow" mark="{{ true }}" color="var(--ink-1)" hint-size="auto,14px">Contact</x-import>
       <h2 id="contact-heading" style="margin:0;maxWidth:26ch;fontFamily:var(--font-serif);fontSize:clamp(32px,5vw,64px);lineHeight:var(--lh-h1);letterSpacing:-.01em;color:var(--ink-1)">Have a role in mind? I'd <em style="fontStyle:italic">love</em> to hear about it.</h2>
-      <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Button" variant="navy" size="lg" href="mailto:swayamagrawal17@gmail.com" hint-size="auto,52px">Email me</x-import>
+      <x-import component-from-global-scope="NikoKanePortfolioDesignSystem_87771f.Button" variant="primary" size="lg" href="mailto:swayamagrawal17@gmail.com" hint-size="auto,52px">Email me</x-import>
     </div>
   </section>
 
