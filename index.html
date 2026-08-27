@@ -43,7 +43,6 @@
 <link rel="stylesheet" href="_ds/niko-kane-portfolio-design-system-87771fc5-dfd9-4961-b0de-c778e4ba9035/styles.css" />
 <link rel="stylesheet" href="styles.css?v=1" />
 <script src="_ds/niko-kane-portfolio-design-system-87771fc5-dfd9-4961-b0de-c778e4ba9035/_ds_bundle.js?v=3"></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 </helmet>
 <div style="background:var(--paper-1);fontFamily:var(--font-ui);color:var(--ink-2)">
 
@@ -1189,11 +1188,6 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
-    const lenis = new Lenis({ lerp: 0.1, duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-    const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
-    requestAnimationFrame(raf);
-    this._lenisCleanup = () => lenis.destroy();
-
     this.buildScrollExpandHero();
     this.buildNavScramble();
     this.buildScrollLinks();
@@ -1229,7 +1223,6 @@ class Component extends DCLogic {
   }
 
   componentWillUnmount() {
-    if (this._lenisCleanup) this._lenisCleanup();
     if (this._onScroll) {
       window.removeEventListener('scroll', this._onScroll);
       window.removeEventListener('resize', this._onScroll);
