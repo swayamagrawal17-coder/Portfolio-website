@@ -624,7 +624,34 @@ class Component extends DCLogic {
     const el = document.getElementById(id);
     if (!el) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 12, behavior: reduce ? 'auto' : 'smooth' });
+    const target = el.getBoundingClientRect().top + window.scrollY - 12;
+
+    if (reduce) {
+      window.scrollTo({ top: target, behavior: 'auto' });
+      return;
+    }
+
+    // Custom smooth scroll animation
+    const start = window.scrollY;
+    const distance = target - start;
+    const duration = 1000;
+    let startTime = null;
+
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+    const scroll = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = easeOutCubic(progress);
+      window.scrollTo(0, start + distance * easeProgress);
+
+      if (progress < 1) {
+        requestAnimationFrame(scroll);
+      }
+    };
+
+    requestAnimationFrame(scroll);
   }
 
   // Vanilla-JS port of the random-letter-swap nav links: on hover/focus each
